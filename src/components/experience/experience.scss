@@ -1,3 +1,42 @@
-.experience{
+.experience {
     background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .slider {
+        height: 550px;
+        display: flex;
+        position: absolute;
+        left: 0;
+
+        .experience-container {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .experience{
+                width: 1050px;
+                height: 100%;
+                background-color: aliceblue; 
+                border-radius: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .left {
+                    flex: 4;
+                    height: 100%;
+                    
+                }
+
+                .right {
+                    flex: 8;
+                    height: 100%;
+                    
+                }
+            }
+        }
+    }
 }

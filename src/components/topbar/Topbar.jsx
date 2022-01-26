@@ -1,6 +1,6 @@
 import React from 'react';
 import "./topbar.scss"
-import {Phone, Email} from "@material-ui/icons"
+import {Phone, Email, LinkedIn, GitHub} from "@material-ui/icons"
 
 export default function Topbar({fixed, setDynamic}) {
   return ( 
@@ -11,12 +11,16 @@ export default function Topbar({fixed, setDynamic}) {
                     jiafei
                 </a>
                 <div className="item-container">
-                    <Phone className="icon"/>
-                    <span>+1 416 836 0613</span>
-                </div>
-                <div className="item-container">
                     <Email className="icon"/>
                     <span>jfl0808@gmail.com</span>
+                </div>
+                <div className="item-container">
+                    <LinkedIn className="icon"/>
+                    <a href="https://www.linkedin.com/in/jiafeilin" target="_blank">LinkedIn</a>
+                </div>
+                <div className="item-container">
+                    <GitHub className="icon"/>
+                    <a href="https://www.github.com/jflin0808" target="_blank">GitHub</a>
                 </div>
             </div>
 

@@ -1,0 +1,15 @@
+@import "../../style.scss";
+
+.skills {
+    font-size: 25px;
+    margin-right: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &.dynamic {
+        background-color: $mainColor;
+        color: aliceblue;
+    }
+}
