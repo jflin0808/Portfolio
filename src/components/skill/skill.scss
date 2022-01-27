@@ -5,56 +5,68 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    transition: all 1s ease;
     
     h1 {
-        font-size: 80px;
+        font-size: 5vw;
     }
 
     ul {
-        margin: 10px;
+        margin: 2vw;
         padding: 0;
         list-style: none;
         display: flex;
     }
-    .skill-container {
-        width: 70%;
-        height: 80%;
+    
+    .wrapper {
+        width: 100vw;
         display: flex;
-        background-color:aliceblue;
-        border-radius: 50px;
-        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+        margin-top: 12vw;
+        position: absolute;
 
-        .skill {
-            width: 300px;
-            height: 250px;
-            border-radius: 20px;
-            border: 1px solid aliceblue;
-            margin: 30px 50px;
+        .skill-container {
+            width: 80%;
+            max-width: 1600px;
+            height: 70%;
+            max-height: 750px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: aliceblue;
-            position: relative;
-            transition: all 1s ease;
-            cursor: pointer;
-
-            h3 {
-                position: absolute;
-                font-size: 20px;
-            }
-
-            img {
-                object-fit: cover;
-                z-index: 1;
-            }
-
-            &:hover {
-                background-color: $mainColor;
+            flex-wrap: wrap;
+    
+            .skill {
+                width: 15vw;
+                height: 15vw;
+                max-width: 300px;
+                max-height: 250px;
+                border-radius: 20px;
+                border: 1px solid aliceblue;
+                margin: 30px 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: aliceblue;
+                position: relative;
+                cursor: pointer;
+    
+                h3 {
+                    position: absolute;
+                    font-size: 20px;
+                }
+    
                 img {
-                    opacity: 0.2;
-                    z-index: 0;
+                    object-fit: cover;
+                    z-index: 1;
+                }
+    
+                &:hover {
+                    background-color: $mainColor;
+                    img {
+                        opacity: 0.2;
+                        z-index: 0;
+                    }
                 }
             }
         }

@@ -1,9 +1,29 @@
+@import "../../style.scss";
+
 .project {
     background-color: cornflowerblue;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    transition: all 1s ease;
 
+    .arrow {
+        height: 100px;
+        position: absolute;
+        cursor: pointer;
+        
+        &.left {
+            left: 0px;
+            transform: rotate(90deg);
+        }
+
+        &.right {
+            right: 0px;
+            transform: scaleY(-1) rotate(-90deg);
+        }
+    }
+    
     .slider {
         height: 550px;
         display: flex;
@@ -17,25 +37,228 @@
             justify-content: center;
 
             .project{
-                width: 1050px;
-                height: 100%;
+                width: 70%;
+                max-width: 1050px;
+                height: 50vw;
+                max-height: 100%;
                 background-color: aliceblue; 
                 border-radius: 30px;
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                flex-direction: column;
 
-                .left {
-                    flex: 4;
-                    height: 100%;
-                    
+                .top {
+                    flex: 10vw;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .top-header{
+                        flex: 1.5vw;
+                        margin: 3% 3% 0% 3%;
+                        display: flex;
+                        flex-direction: row;
+
+                        .title-container {
+                            flex: 3;
+                            
+                            h2 {
+                                font-size: clamp(20px, 3vw, 55px);
+                            }
+                        }
+                        
+                        .icon-container {
+                            flex: 2;
+                            display: flex;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            
+                            .logo {
+                                width: 4vw;
+                                height: 4vw;
+                                max-width: 55px;
+                                max-height: 55px;
+                                margin-right: 20%;
+                            }
+                        }
+                    }
+
+                    .top-body {
+                        flex: 4;
+
+                        ul {
+                            padding: 0 0;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            
+                            span {
+                                font-size: clamp(10px, 1.5vw, 20px);
+                                color: $mainColor;
+                                font-weight: 600;
+                                margin-bottom: 1%;
+                                margin-top: 2%
+                            }
+
+                            li {
+                                font-size: clamp(10px, 1.5vw, 20px);
+                                margin-bottom: 1%;
+
+                                span {
+                                    font-style: bold;
+                                    font-size: clamp(10px, 1.5vw, 20px);
+                                    color: $mainColor;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+
                 }
 
-                .right {
-                    flex: 8;
-                    height: 100%;
-                    
+                .bottom {
+                    flex: 3;
+                    display: flex;
+                    flex-direction: row;
+
+                    .left {
+                        flex: 1;
+                        display: flex;
+                        height: 90%;
+                        
+                        .img-container{
+                            scrollbar-width: none;
+                            &::-webkit-scrollbar{
+                            display: none;
+                            }
+
+                            img {
+                                margin-left: 5%;
+                                border-radius: 20px;
+                                width: 90%;
+                            }
+                        }
+                    }
+
+                    .right {
+                        flex: 1;
+                        display: flex;
+                        width: 90%;
+                        height: 90%;
+
+                        .img-container{
+                            scrollbar-width: none;
+                            &::-webkit-scrollbar{
+                            display: none;
+                            }
+
+                            img {
+                                margin-left: 5%;
+                                border-radius: 20px;
+                                width: 90%;
+                            }
+                        }
+                    }
                 }
+
+
+
+
+                // .left {
+                //     flex: 4;
+                //     height: 100%;
+                //     display: flex;
+                //     flex-direction: column;
+                //     justify-content: center;
+
+                //     .left-container {
+                        
+                //         height: 70%;
+                //         display: flex;
+                //         flex-direction: column;
+                //         align-items: center;
+                //         justify-content: space-between;
+
+                //         h2 {
+                //             font-size: 55px;
+                //             margin-left: 10%;
+                //             margin-bottom: 40px;
+                //         }
+                        
+                //         .img-container {
+                //             width: 90%;
+                //             margin-left: 10%;
+                //             height: 150px;
+                //             max-height: 30%;
+                //             display: flex;
+                //             flex-direction: row;
+                //             justify-content: space-between;
+
+                //             .logo {
+                //                 width: 6vw;
+                //                 height: 6vw;
+                //                 max-width: 80px;
+                //                 max-height: 80px;
+                                
+                //             }
+                //         }
+
+                //         p {
+                //             margin-left: 10%;
+                //             font-size: 20px;
+                //         }
+                //     }
+                // }
+
+                // .right {
+                //     flex: 8;
+                //     height: 100%;
+                    
+                //     .right-container {
+                //         height: 100%;
+                //         display: flex;
+                //         flex-direction: column;
+                //         align-items: center;
+                        
+                //         .description-container {
+                //             flex: 2;
+                            
+                //             ul {
+                //                 height: 80%;
+                //                 margin-left: 10%;
+                //                 padding: 15px 0px;
+                //                 display: flex;
+                //                 flex-direction: column;
+                //                 justify-content: space-between;
+    
+                //                 li {
+                //                     font-size: 20px;
+    
+                //                     span {
+                //                         font-style: bold;
+                //                         color: $mainColor;
+                //                         font-weight: 700;
+                //                     }
+                //                 }
+                //             }
+                //         }
+
+                //         .img-container {
+                //             flex: 2;
+                //             width: 80%;
+                //             flex-direction: column;
+                //             scrollbar-width: none;
+                //             &::-webkit-scrollbar{
+                //                 display: none;
+                //             }
+
+                //             img {
+                //                 height: 90%;
+
+                //             }
+                //         }
+                //     }
+                // }
             }
         }
     }

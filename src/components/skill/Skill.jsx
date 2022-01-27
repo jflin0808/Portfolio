@@ -1,6 +1,6 @@
 import Skills from "../skills/Skills.jsx";
 import { useState, useEffect } from "react";
-import { language, web, ds } from "../../data.js"
+import { language, web, ds } from "../../data-skill.js"
 import "./skill.scss";
 
 export default function Skill() {
@@ -51,15 +51,17 @@ export default function Skill() {
           setSelected={setSelected}
           />
         ))}
-      </ul> 
-      <div className="skill-container" >
-        {data.map((data) => (
-          <div className="skill">
-            <img src={data.img}/>
-            <h3>{data.title}</h3>
-          </div>
-        ))}
-      </div>
+      </ul>
+      <div className="wrapper">
+        <div className="skill-container">
+          {data.map((data) => (
+            <div className="skill">
+              <img src={data.img}/>
+              <h3>{data.title}</h3>
+            </div>
+          ))}
+        </div>
+      </div> 
     </div> 
   )
 }

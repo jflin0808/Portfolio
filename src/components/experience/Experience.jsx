@@ -9,7 +9,7 @@ export default function Experience() {
           <div className="experience">
             <div className="left">
 
-            </div>
+            </div>            
             <div className="right">
               
             </div>
