@@ -1,40 +1,62 @@
 .experience {
     background-color: lightblue;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 
-    .slider {
-        height: 550px;
+    h1 {
+        font-size: 5vw;
+    }
+
+    .experience-container {
+        width: 100%;
+        height: 100%;
         display: flex;
-        position: absolute;
-        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        .experience-container {
-            width: 100vw;
+        .card-container {
+            width: 30vw;
+            height: 40vw;
+            max-height: 70%;
+            max-width: 30%;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px -8px black;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
 
-            .experience{
-                width: 1050px;
-                height: 100%;
-                background-color: aliceblue; 
-                border-radius: 30px;
+            .card-top {
+                flex: 2;
+                width: 55%;
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 3vw;
 
-                .left {
-                    flex: 4;
-                    height: 100%;
-                    
+                .middle-icon {
+                    height: 5vw;
+                    width: 5vw;
+                    max-width: 35%;
+                    max-height: 35%;
+                }
+                
+                .left-icon {
+                    margin-top: 1.2vw;
+                    height: 2.5vw;
+                    width: 2.5vw;
+                    max-width: 20%;
+                    max-height: 20%;
                 }
 
-                .right {
-                    flex: 8;
-                    height: 100%;
-                    
+                .right-icon {
+                    margin-top: 1vw;
+                    height: 3vw;
+                    width: 3vw;
+                    max-width: 20%;
+                    max-height: 20%;
                 }
             }
         }

@@ -4,7 +4,7 @@ export const projectData = [
         title: "Pathfinder",
         firstIcon: "./assets/language/python.png",
         secondIcon: "./assets/misc/pygame.png",
-        thirdIcon: "./assets/misc/oop/png",
+        thirdIcon: "./assets/misc/oop.png",
         description: "Interactive implementation of A-star path-finding algorithm visualizer",
         firstPoint: "Real time relational node calculations and visual path traversal",
         secondPoint: "A-star implementation running 30% faster than average algorithms",
@@ -136,10 +136,10 @@ export const projectData = [
     },
     {
         id: "10",
-        title: "Unsupervised Learning",
+        title: "Clustering",
         firstIcon: "./assets/",
         secondIcon: "./assets/",
-        thirdIcon: "./assets/",
+        thirdIcon: "./assets/", 
         description: "",
         firstPoint: "",
         secondPoint: "",
@@ -149,5 +149,4 @@ export const projectData = [
         video: "./assets/demo/unsupervised.mp4",
         github: "",
     },
-    
 ]

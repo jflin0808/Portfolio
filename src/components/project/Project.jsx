@@ -1,87 +1,65 @@
-import React from 'react';
-import "./project.scss"
+import { projectData } from "../../data-project.js";
+import { useState } from "react";
+import "./project.scss";
 
 export default function Project() {
+
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const slidePage = (direction) => {
+    direction === "left" ? setCurrentPage(currentPage > 0 ? currentPage-1 : projectData.length-1) 
+                         : setCurrentPage(currentPage < projectData.length-1 ? currentPage+1 : 0);
+  }
+
   return ( 
     <div className="project" id="project">
-      <div className="slider">
-        <div className="project-container">
-          <div className="project">
-            <div className="top">
-              <div className="top-header">
-                <div className="title-container">
-                  <h2>Recipe Hub</h2>
+      <div className="slider" style={{transform: `translateX(-${currentPage * 100}vw)` }}>
+        {projectData.map((d) => (
+          <div className="project-container">
+            <div className="project">
+              <div className="top">
+                <div className="top-header">
+                  <div className="title-container">
+                    <h2>{ d.title }</h2>
+                  </div>
+                  <div className="icon-container">
+                    <img src={ d.firstIcon } className="logo"/>
+                    <img src={ d.secondIcon } className="logo"/>
+                    <img src={ d.thirdIcon } className="logo"/>
+                  </div>
                 </div>
-                <div className="icon-container">
-                  <img src="assets/language/python.png" className="logo"/>
-                  <img src="assets/web/django.jpg" className="logo"/>
-                  <img src="assets/misc/docker.png" className="logo"/>
-                </div>
-              </div>
-              <div className="top-body">
-                <ul>
-                  <span>Fully functional web application allowing users to create and share recipes online</span>
-                  <li>Functional <span>CRUD</span> operations for users and recipes</li>
-                  <li>Engineered <span>REST API</span> and set up relational data models</li>
-                  <li>Created <span>Docker</span> image of app and deployed to Google Cloud</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bottom">
-              <div className="left">
-                <div className="img-container">
-                  <img src="assets/demo/recipehub.png"/>
-                </div>
-              </div>
-              <div className="right">
-                <div className="img-container">
-                  <a href="https://github.com/jflin0808/RecipeHub" target="_blank">
-                    <img src="assets/code/recipehub.png"/>
-                  </a>
-                </div>
-              </div>
-              
-
-            </div>
-
-
-            {/* <div className="left">
-              <div className="left-container">
-                <h2>Recipe Hub</h2>
-                <div className="img-container">
-                  <img src="assets/language/python.png" className="logo"/>
-                  <img src="assets/web/django.jpg" className="logo"/>
-                  <img src="assets/docker.png" className="logo"/>
-                </div>
-                <p>Fully functional web application allowing users to create and share recipes online</p>
-              </div>
-            </div>
-
-            <div className="right">
-              <div className="right-container">
-                <div className="description-container">
+                <div className="top-body">
                   <ul>
-                    <li>Functional <span>CRUD</span> operations for users and recipes</li>
-                    <li>Engineered <span>REST API</span> and set up relational data models</li>
-                    <li>Created <span>Docker</span> image of app and deployed to Google Cloud</li>
+                    <span>{ d.description }</span>
+                    <li>{ d.firstPoint }</li>
+                    <li>{ d.secondPoint }</li>
+                    <li>{ d.thirdPoint }</li>
                   </ul>
                 </div>
-                <div className="img-container">
-                  <a href="https://github.com/jflin0808/RecipeHub" target="_blank">
-                    <img src="assets/demo/recipehub_demo.png"/>
-                  </a>
+              </div>
+
+              <div className="bottom">
+                <div className="left">
+                  <div className="img-container">
+                    { d.video !== "" 
+                      ? <video src={ d.video } controls/>
+                      : <img src={ d.demoImage }/>
+                    }
+                  </div>
                 </div>
-                <div className="img-container">
-                  <img src="assets/code/recipehub.png"/>
+                <div className="right">
+                  <div className="img-container">
+                    <a href={ d.github } target="_blank">
+                      <img src={ d.codeImage }/>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div> */}
-          </div>
-        </div>
+            </div>
+        </div>))}
       </div>
-      <img src="assets/arrow.jpg" className="arrow left"/>
-      <img src="assets/arrow.jpg" className="arrow right"/>
+      <img src="assets/arrow.jpg" className="arrow left" onClick={() => slidePage("left")}/>
+      <img src="assets/arrow.jpg" className="arrow right" onClick={() => slidePage("right")}/>
     </div> 
   )
 }

@@ -18,7 +18,6 @@ export default function Introduction() {
     <div className="introduction" id="introduction">
       <div className="left">
         <div className="img-container">
-          <img src="assets/who.gif"/>
         </div>
       </div>
       <div className="right">

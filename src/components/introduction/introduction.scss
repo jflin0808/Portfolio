@@ -7,13 +7,12 @@
         overflow: hidden;
         
         .img-container {
-            width: calc(100vh + 120px);
-            height: calc(100vh + 120px);
-            background-color:darkviolet;
+            margin-top: 10%;
+            width: clamp(120%, 1vw, 120%);
+            height: clamp(120%, 1vw, 120%);
             border-radius: 50%;
+            background-color:darkviolet;
             display: flex;
-            align-items: flex-end;
-            justify-content: center;
             float: right;
 
             img{
@@ -35,14 +34,14 @@
             justify-content: center;
 
             h1 {
-                font-size: 80px;
+                font-size: 4vw;
                 margin: 15px 0;
             }
             h2 {
-                font-size: 35px;
+                font-size: 2.5vw;
             }
             h3 {
-                font-size: 35px;
+                font-size: 2.5vw;
                 font-style: italic;
 
                 span {
