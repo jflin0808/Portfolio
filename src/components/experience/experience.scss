@@ -1,62 +1,103 @@
 .experience {
-    background-color: lightblue;
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s ease;
 
     h1 {
         font-size: 5vw;
+        margin-top: clamp(5%, 10vw, 6%);
     }
 
     .experience-container {
         width: 100%;
-        height: 100%;
+        height: 70%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
 
         .card-container {
-            width: 30vw;
-            height: 40vw;
-            max-height: 70%;
-            max-width: 30%;
-            border-radius: 15px;
+            width: clamp(20%, 30vw, 450px);
+            height: clamp(15%, 40vw, 80%);
+            border-radius: 10px;
             box-shadow: 0px 0px 15px -8px black;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
+            transition: all 1s ease;
+
+            &.highlight {
+                width: clamp(20%, 33vw, 500px);
+                height: clamp(15%, 43vw, 85%);
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
 
             .card-top {
-                flex: 2;
+                height: 15%;
                 width: 55%;
                 display: flex;
                 flex-direction: row;
+                align-items: center;
                 justify-content: space-between;
                 margin-top: 3vw;
 
                 .middle-icon {
-                    height: 5vw;
-                    width: 5vw;
-                    max-width: 35%;
-                    max-height: 35%;
+                    height: clamp(30px, 4vw, 70px);
+                    width: clamp(30px, 4vw, 70px);
+                    border-radius: 50%;
                 }
                 
                 .left-icon {
-                    margin-top: 1.2vw;
-                    height: 2.5vw;
-                    width: 2.5vw;
-                    max-width: 20%;
-                    max-height: 20%;
+                    height: clamp(15px, 2.5vw, 40px);
+                    width: clamp(15px, 2.5vw, 40px);
                 }
 
-                .right-icon {
-                    margin-top: 1vw;
-                    height: 3vw;
-                    width: 3vw;
-                    max-width: 20%;
-                    max-height: 20%;
+                .right-icon {   
+                    height: clamp(15px, 2.7vw, 45px);
+                    width: clamp(15px, 2.7vw, 45px);
+                }
+            }
+
+            .card-middle {
+                height: clamp(15%, 10vw, 25%);
+                width: 80%;
+                margin-top: 10%;
+                border-radius: 0.5vw;
+                padding: 5%;
+                background-color: rgb(236, 227, 241);
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+                p {    
+                    font-size: clamp(5px, 1.3vw, 20px);
+                    font-weight: 400;
+                }
+            }
+
+            .card-bottom {
+                flex: 1;
+                margin-top: clamp(3%, 3vw, 5%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h3 {
+                    font-weight: 700;
+                    font-size: clamp(10px, 1.7vw, 30px)
+                }
+
+                h4 {
+                    color: rgb(28, 36, 33);
+                    margin-top: clamp(1%, 1.5vw, 3%);
+                    font-weight: 600;
+                    font-size: clamp(10px, 1.3vw, 20px)
                 }
             }
         }

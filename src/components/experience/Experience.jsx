@@ -1,29 +1,31 @@
-import React from 'react';
+import { experience } from "../../data-experience.js";
 import "./experience.scss"
 
 export default function Experience() {
   return ( 
     <div className="experience" id="experience">
+      <h1>Experience</h1>
       <div className="experience-container">
-        <h1>Experience</h1>
-        <div className="card-container">
-            <div className="card-top">
-              <img src="assets/misc/website.png" className="left-icon"/>
-              <img src="assets/misc/lakeridge.png" className="middle-icon"/>
-              <img src="assets/misc/map.png" className="right-icon"/>
-            </div>
-
-            <div className="card-middle">
-              <p>
-                Sample Text
-              </p>
-            </div>
-            
-            <div className="card-bottom">
-              <h3>Lakeridge</h3>
-              <h4>IT Support</h4>
-            </div>
-        </div>
+        {experience.map((exp) =>(
+          <div className={exp.highlight ? "card-container highlight" : "card-container"}>
+              <div className="card-top">
+                <a href={ exp.website } target="_blank">
+                  <img src="assets/misc/website.png" className="left-icon"/>
+                </a>
+                <img src={ exp.logo } className="middle-icon"/>
+                <a href={ exp.location } target="_blank">
+                  <img src="assets/misc/map.png" className="right-icon"/>
+                </a>
+              </div>
+              <div className="card-middle">
+                <p>{ exp.description }</p>
+              </div>
+              <div className="card-bottom">
+                <h3>{ exp.title }</h3>
+                <h4>{ exp.employer }</h4>
+              </div>
+          </div>
+        ))}
       </div>
     </div> 
   )

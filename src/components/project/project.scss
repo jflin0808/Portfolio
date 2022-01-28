@@ -1,15 +1,15 @@
 @import "../../style.scss";
 
 .project {
-    background-color: cornflowerblue;
+    background-color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 
     .arrow {
-        height: 100px;
+        height: 20vmin;
         position: absolute;
         cursor: pointer;
         
@@ -25,7 +25,6 @@
     }
     
     .slider {
-        height: 550px;
         display: flex;
         position: absolute;
         left: 0;
@@ -39,16 +38,22 @@
 
             .project{
                 width: 70%;
-                max-width: 1050px;
-                height: 50vw;
-                max-height: 100%;
+                max-width: 1400px;
+                height: 70vmin;
+                max-height: 700px;
                 background-color: aliceblue; 
-                border-radius: 30px;
+                border-radius: 3vmin;
+                box-shadow: 0px 0px 15px -8px black;
                 display: flex;
                 flex-direction: column;
 
+                @include mobile {
+                    height: 80vmin;
+                    max-height: 100vh;
+                }
+
                 .top {
-                    flex: 10vw;
+                    flex: 2.5;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
@@ -63,7 +68,7 @@
                             flex: 3;
                             
                             h2 {
-                                font-size: clamp(20px, 3vw, 55px);
+                                font-size: clamp(10px, 6vmin, 55px);
                             }
                         }
                         
@@ -75,8 +80,8 @@
                             flex-direction: row;
                             
                             .logo {
-                                width: 4vw;
-                                height: 4vw;
+                                width: 4vmin;
+                                height: 4vmin;
                                 max-width: 55px;
                                 max-height: 55px;
                                 margin-right: 20%;
@@ -94,7 +99,7 @@
                             align-items: center;
                             
                             span {
-                                font-size: clamp(10px, 1.5vw, 20px);
+                                font-size: clamp(2vmin, 1.5vw, 20px);
                                 color: $mainColor;
                                 font-weight: 600;
                                 margin-bottom: 1%;
@@ -102,7 +107,7 @@
                             }
 
                             li {
-                                font-size: clamp(10px, 1.5vw, 20px);
+                                font-size: clamp(2vmin, 1.5vw, 20px);
                                 margin-bottom: 1%;
 
                                 span {
@@ -126,7 +131,7 @@
                         flex: 1;
                         display: flex;
                         height: 90%;
-                        width: 20vw;
+                        width: 80%;
                         
                         .img-container{
                             scrollbar-width: none;
@@ -136,13 +141,13 @@
                             
                             video {
                                 margin-left: 5%;
-                                border-radius: 20px;
+                                border-radius: 1vw;
                                 width: 90%;
                             }
 
                             img {
                                 margin-left: 5%;
-                                border-radius: 20px;
+                                border-radius: 1vw;
                                 width: 90%;
                             }
                         }
@@ -162,7 +167,7 @@
 
                             img {
                                 margin-left: 5%;
-                                border-radius: 20px;
+                                border-radius: 1vw;
                                 width: 90%;
                             }
                         }

@@ -1,4 +1,3 @@
-import React from 'react';
 import "./topbar.scss"
 import {Phone, Email, LinkedIn, GitHub} from "@material-ui/icons"
 
