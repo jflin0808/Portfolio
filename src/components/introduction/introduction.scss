@@ -1,109 +1,87 @@
 @import "../../style.scss";
 
 .introduction {
-    background-color:aliceblue;
+    background-image: url("../../../public/assets/homepage.svg");
+    background-position: center center;
     display: flex;
+    justify-content: center;
 
     @include mobile {
         flex-direction: column;
     }
 
-    .left {
-        flex: 0.5;
-        overflow: hidden;
-        
-        .img-container {
-            margin-top: 10%;
-            width: clamp(120%, 1vw, 120%);
-            height: clamp(120%, 1vw, 120%);
-            border-radius: 50%;
-            background-color:darkviolet;
-            display: flex;
-            float: right;
+    .wrapper {
+        width: 100vw;
+        height: calc(100vh - 300px);
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-            img{
-                padding-bottom: 300px;
+        @include mobile {
+            width: 100%;
+            height: 100%;
+            margin-top: 150px;
+            padding-left: 0;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: calc(40px + 4vmin);
+            margin: 15px 0;
+
+            @include mobile {
+                font-size: 12vmin;
+            }
+        }
+        
+        h2 {
+            font-size: 4vmin;
+
+            @include mobile {
+                font-size: 8vmin;
+            }
+        }
+
+        h3 {
+            font-size: calc(10px + 2.5vmin);
+            font-style: none;
+
+            span {
+                color: darkviolet;
+            }
+            .ityped-cursor {
+                animation: cursorBlink 1s infinite;
+            }
+
+            @keyframes cursorBlink {
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            @include mobile {
+                font-size: 5vmin;
             }
         }
     }
 
-    .right {
-        flex: 0.5;
-        position: relative;
+    a {
+        position: absolute;
+        bottom: 1vmin;
+        left: 50%;
 
-        .wrapper {
-            width: calc(100vh - 120px);
-            height: calc(100vh - 180px);
-            padding-left: 100px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            @include mobile {
-                width: 100%;
-                height: 100%;
-                padding-left: 0;
-                align-items: center;
-            }
-
-            h1 {
-                font-size: 4vw;
-                margin: 15px 0;
-
-                @include mobile {
-                    font-size: 12vmin;
-                }
-            }
-            h2 {
-                font-size: 2.5vw;
-
-                @include mobile {
-                    font-size: 8vmin;
-                }
-            }
-            h3 {
-                font-size: 2.5vw;
-                font-style: none;
-
-                span {
-                    color: darkviolet;
-                }
-                .ityped-cursor {
-                    animation: cursorBlink 1s infinite;
-                }
-
-                @keyframes cursorBlink {
-                    50% {
-                        opacity: 1;
-                    }
-                    100% {
-                        opacity: 0;
-                    }
-                }
-
-                @include mobile {
-                    font-size: 5vmin;
-                }
-            }
+        img{
+            width: 4vmin;
+            animation: arrowAnimation 2s infinite;
         }
-        a {
-            position: absolute;
-            bottom: 1vmin;
-            left: 40%;
 
-            @include mobile {
-                display: none;
-            }
-
-            img{
-                width: 4vmin;
-                animation: arrowAnimation 2s infinite;
-            }
-
-            @keyframes arrowAnimation {
-                100% {
-                    opacity: 0;
-                }
+        @keyframes arrowAnimation {
+            100% {
+                opacity: 0;
             }
         }
     }

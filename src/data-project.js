@@ -26,7 +26,7 @@ export const projectData = [
         thirdPoint: "Created Docker image of app and deployed to Google Cloud",
         demoImage: "./assets/demo/recipehub.png",
         codeImage: "./assets/code/recipehub.png",
-        video: "./assets/demo/",
+        video: "",
         github: "https://github.com/jflin0808/RecipeHub",
     },
     {
@@ -41,7 +41,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/lol.png",
         codeImage: "./assets/code/lol.png",
-        video: "./assets/demo/",
+        video: "",
         github: "",
     },
     {
@@ -56,7 +56,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/student.png",
         codeImage: "./assets/code/student.png",
-        video: "./assets/demo/",
+        video: "",
         github: "",
     },
     {
@@ -71,7 +71,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/sudoku.png",
         codeImage: "./assets/code/sudoku.png",
-        video: "./assets/demo/",
+        video: "",
         github: "",
     },
     {

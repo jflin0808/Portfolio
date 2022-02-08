@@ -16,22 +16,16 @@ export default function Introduction() {
 
   return ( 
     <div className="introduction" id="introduction">
-      <div className="left">
-        <div className="img-container">
-        </div>
+      <div className="wrapper">
+        <h2>Hello, I'm</h2>
+        <h1>Jia fei Lin</h1>
+        <h3>
+          <span ref={textRef}></span>
+        </h3>
       </div>
-      <div className="right">
-        <div className="wrapper">
-          <h2>Hello, I'm</h2>
-          <h1>Jia fei Lin</h1>
-          <h3>
-            <span ref={textRef}></span>
-          </h3>
-        </div>
-        <a href="#skill">
-          <img src="assets/down.jpg" alt=""/>
-        </a>
-      </div>
-    </div> 
+      <a href="#skill">
+        <img src="assets/down.jpg" alt=""/>
+      </a>
+    </div>
   )
 }
