@@ -11,7 +11,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/",
         codeImage: "./assets/code/pathfinder.png",
-        video: "./assets/demo/pathfinder.mp4",
+        video: "https://www.youtube.com/embed?v=YagiS6ByFg0",
         github: "https://github.com/jflin0808/PathFinder",
     },
     {
@@ -86,7 +86,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/bank.png",
         codeImage: "./assets/code/bank.png",
-        video: "./assets/demo/",
+        video: "",
         github: "",
     },
     {
@@ -101,7 +101,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/",
         codeImage: "./assets/code/linear.png",
-        video: "./assets/demo/linear.mp4",
+        video: "https://www.youtube.com/embed?v=mNMiBaZszIs",
         github: "",
     },
     {
@@ -116,7 +116,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/",
         codeImage: "./assets/code/logistic.png",
-        video: "./assets/demo/logistic.mp4",
+        video: "https://www.youtube.com/embed?v=ZQgmrdeYQM8",
         github: "",
     },
     {
@@ -131,7 +131,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/",
         codeImage: "./assets/code/neural.png",
-        video: "./assets/demo/neural.mp4",
+        video: "https://www.youtube.com/embed?v=HJiVvMSL0yk",
         github: "",
     },
     {
@@ -146,7 +146,7 @@ export const projectData = [
         thirdPoint: "",
         demoImage: "./assets/demo/",
         codeImage: "./assets/code/unsupervised.png",
-        video: "./assets/demo/unsupervised.mp4",
+        video: "https://www.youtube.com/embed?v=yGOKgPYFTGo",
         github: "",
     },
 ]
