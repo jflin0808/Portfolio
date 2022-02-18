@@ -42,7 +42,7 @@ export default function Project() {
                 <div className="left">
                   <div className="img-container">
                     { d.video !== "" 
-                      ? <iframe src={ d.video } />
+                      ? <video src={ d.video } controls/>
                       : <img src={ d.demoImage }/>
                     }
                   </div>
