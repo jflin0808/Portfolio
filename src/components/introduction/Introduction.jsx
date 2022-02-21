@@ -24,7 +24,7 @@ export default function Introduction() {
         </h3>
       </div>
       <a href="#skill">
-        <img src="assets/down.jpg" alt=""/>
+        <img src="assets/arrow.jpg" alt=""/>
       </a>
     </div>
   )
