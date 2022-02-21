@@ -9,7 +9,7 @@
     transition: all 1s ease;
 
     h1 {
-        font-size: clamp(20px, 5vw, 80px);
+        font-size: clamp(40px, 5vw, 80px);
     }
 
     .experience-container {
@@ -22,10 +22,11 @@
 
         @include mobile {
             flex-direction: column;
-            height: 90%;
+            height: 70%;
         }
 
         .card-container {
+            background-color: aliceblue;
             width: clamp(20%, 30vw, 450px);
             height: clamp(15%, 40vw, 80%);
             border-radius: 10px;
@@ -37,7 +38,7 @@
             transition: all 1s ease;
 
             @include mobile {
-                width: clamp(60%, 30vw, 90%);
+                width: clamp(50%, 30vw, 90%);
                 height: clamp(30%, 40vw, 30%);
             }
 
@@ -46,7 +47,7 @@
                 height: clamp(15%, 43vw, 85%);
 
                 @include mobile {
-                    width: clamp(65%, 35vw, 90%);
+                    width: clamp(55%, 35vw, 90%);
                     height: clamp(33%, 45vw, 33%);
                 }
             }

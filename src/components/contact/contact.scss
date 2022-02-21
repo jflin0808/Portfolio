@@ -1,15 +1,16 @@
+@import "../../style.scss";
+
 .contact {
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     transition: all 1s ease;
     
     h2 {
-        font-size: clamp(20px, 5vw, 80px);
-        margin-top: clamp(5%, 10vw, 6%);
-        margin-bottom: clamp(1%, 10vw, 3%);
+        font-size: clamp(40px, 5vw, 80px);
+        margin-top: clamp(4%, 10vw, 4%);
+        margin-bottom: clamp(1%, 10vw, 2%);
     }
 
     form {
@@ -20,23 +21,40 @@
         align-items: center;
         
         input {
+            background-color: rgb(212, 231, 248);
             width: clamp(60%, 30vw, 100%);
-            height: clamp(3%, 3vw, 100%);
+            height: clamp(5%, 3vw, 5%);
             font-size: clamp(10px, 2.5vw, 30px);
             border: none;
             border-radius: 0.5vw;
             padding: 0.5vw;
             margin-bottom: 2vw;
+
+            @include mobile {
+                min-width: 100%;
+                min-height: 7%;
+                font-size: clamp(20px, 2.5vw, 30px);
+                border-radius: 2vw;
+            }
         }
 
         textarea {
+            background-color: rgb(212, 231, 248);
             width: clamp(60%, 30vw, 80%);
-            height: clamp(30%, 30vw, 80%);
+            height: clamp(30%, 30vw, 60%);
             font-size: clamp(10px, 2.5vw, 30px);
             border: none;
             border-radius: 0.5vw;
             padding: 0.5vw;
             margin-bottom: 2vw;
+            display: flex;
+
+            @include mobile {
+                min-width: 100%;
+                min-height: 50%;
+                font-size: clamp(20px, 2.5vw, 30px);
+                border-radius: 2vw;
+            }
         }            
 
         button {
@@ -52,10 +70,19 @@
             color: aliceblue;
             box-shadow: 0 0 2vw 0px rgb(103, 27, 226);
             margin-bottom: 2vw;
+
+            @include mobile {
+                min-width: 30%;
+                min-height: 10%;
+                font-size: clamp(20px, 2.5vw, 30px);
+                border-radius: 2vw;
+            }
         }
 
         span {
-            color: rgb(103, 27, 226)
+            color: rgb(212, 231, 248);
+            font-size: clamp(20px, 2.5vw, 30px);
+            overflow: hidden;
         }
     }
 }

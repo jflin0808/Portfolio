@@ -10,8 +10,7 @@
     transition: all 1s ease;
     
     h1 {
-        font-size: clamp(10px, 5vw, 80px);
-        margin-top: clamp(-10%, -3vmin, -20%);
+        font-size: clamp(40px, 5vw, 80px); 
         margin-bottom: clamp(1%, 3vmin, 3%);
     }
 
@@ -62,7 +61,7 @@
     
                 h3 {
                     position: absolute;
-                    font-size: 20px;
+                    font-size: clamp(10px, 3vw, 20px); 
                 }
     
                 img {
