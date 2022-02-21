@@ -59,8 +59,8 @@ export const web = [
     },
     {
         id: 6,
-        title: "Rails",
-        img: "assets/web/rails.png"
+        title: "Figma",
+        img: "assets/web/figma.png"
     },
 ];
 
