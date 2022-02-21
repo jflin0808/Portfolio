@@ -135,6 +135,7 @@
                         width: 80%;
                         
                         .img-container{
+                            height: 90%;
                             scrollbar-width: none;
                             &::-webkit-scrollbar{
                             display: none;
@@ -164,7 +165,8 @@
                             flex: 0;
                         }
 
-                        .img-container{
+                        .img-container {
+                            height: 90%;
                             scrollbar-width: none;
                             &::-webkit-scrollbar{
                             display: none;
