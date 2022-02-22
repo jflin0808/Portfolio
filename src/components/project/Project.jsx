@@ -43,14 +43,14 @@ export default function Project() {
                   <div className="img-container">
                     { d.video !== "" 
                       ? <video src={ d.video } controls/>
-                      : <img src={ d.demoImage }/>
+                      : <img src={ d.demoImage } className="demo"/>
                     }
                   </div>
                 </div>
                 <div className="right">
                   <div className="img-container">
                     <a href={ d.github } target="_blank">
-                      <img src={ d.codeImage }/>
+                      <img src={ d.codeImage } className="code"/>
                     </a>
                   </div>
                 </div>

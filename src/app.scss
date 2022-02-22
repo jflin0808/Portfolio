@@ -3,9 +3,9 @@
 
     .sections {
         width: 100%;
-        height: calc(100vh - 90px);   
+        height: calc(100vh - 10vh);   
         position: relative;
-        top: 90px;
+        top: 10vh;
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none;
@@ -15,12 +15,11 @@
 
         > *{
             width: 100vw;
-            height: calc(100vh - 90px);
+            height: calc(100vh - 10vh);
             scroll-snap-align: start;
-            background: url(../public/assets/homepage.svg) repeat fixed 100%;
-            background-position: center 10%;
-            background-size: fill;
-            
+            background: url(../public/assets/homepage.svg) no-repeat fixed 100%;
+            background-size: 200vh;
+            background-position: center 10vh;
         }
     }
 }

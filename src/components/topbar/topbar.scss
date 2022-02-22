@@ -2,34 +2,35 @@
 
 .topbar {
     width: 100%;
-    height: 90px;
+    height: 10vh;
     background-color: aliceblue;
     color: $mainColor;
     position: fixed;
     top: 0;
     z-index: 3;
     transition: all 2s ease;
-
+    display: flex;
+    
     .wrapper {
-        padding: 12px 30px;
+        width: 100%;
         display: flex;
-        align-items: center;
-        justify-content:space-between;
+        align-items: center; 
+        overflow: hidden;
 
         .left {
             display: flex;
-            align-items: center;
+            justify-content: flex-start;
         
             .logo {
-                font-size: 55px;
+                font-size: 5vmin;
                 font-weight: 700;
                 font-style: bold;
                 text-decoration: none;
-                color:inherit;
+                color: inherit;
                 margin-right: 4vmin;
 
                 @include mobile {
-                    font-size: clamp(7vw, 6vmin, 10vh);
+                    font-size: clamp(7vw, 6vmin, 10vmin);
                 }
             }
 
@@ -63,12 +64,13 @@
         .right {
 
             .menu-icon {
-                width: 25px;
-                height: 20px;
+                width: 3vmin;
+                height: 2vmin;
                 padding: 1em;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+            
                 cursor: pointer;
 
                 @include mobile {
